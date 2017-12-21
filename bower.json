@@ -1,0 +1,26 @@
+{
+    "name": "lobilist-angularjs",
+    "homepage": "https://github.com/arboshiki/lobilist-angularjs",
+    "authors": [
+        "Zura Sekhniashvili <zurasekhniashvili@gmail.com>"
+    ],
+    "description": "AngularJs wrapper for Lobilist",
+    "main": [
+        "lobilist.js"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "^1.5.11",
+        "bootstrap": "^3.3.7",
+        "jquery": "^2.0.0",
+        "jquery-ui": "^1.12.1",
+        "lobilist": "master"
+    }
+}
