@@ -6,7 +6,7 @@
     ],
     "description": "AngularJs wrapper for Lobilist",
     "main": [
-        "lobilist.js"
+        "lobilist-angularjs.js"
     ],
     "license": "MIT",
     "ignore": [

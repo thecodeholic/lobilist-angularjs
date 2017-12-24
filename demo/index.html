@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/lobilist/dist/lobilist.css">
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="../bower_components/lobilist/dist/lobilist.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../src/lobilist.module.js"></script>
+    <script src="../src/lobilist.directive.js"></script>
+    <script src="../src/lobilist.controller.js"></script>
+
+    <script src="app.module.js"></script>
+
+</head>
+<body style="padding: 25px" ng-app="app" ng-controller="LobiListDemoController as vm">
+
+<div>
+    <lobilist options="vm.options"></lobilist>
+</div>
+
+</body>
+</html>
