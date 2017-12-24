@@ -5,10 +5,10 @@
     'use strict';
 
     angular.module('lobilist')
-        .directive('lobilist', ['$timeout', lobilist])
+        .directive('lobilist', ['$timeout', '$compile', lobilist])
     ;
 
-    function lobilist($timeout) {
+    function lobilist($timeout, $compile) {
         return {
             replace: true,
             restrict: 'E',
@@ -19,15 +19,16 @@
                 options: '=',
                 events: '='
             },
-            template: ``,
-            link: function (scope, el, attrs) {
-                console.log("mdaaa");
-                $timeout(function(){
-                    console.log(scope.options);
+            template: '',
+            link: function link(scope, el, attrs) {
+                $timeout(function () {
+                    scope.options = scope.options || {};
+                    scope.options.forAngularJs = true;
                     $(el).lobiList(scope.options);
+                    $compile(el.contents())(scope);
                 });
             }
-        }
+        };
     }
 
 })();
