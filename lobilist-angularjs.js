@@ -28,9 +28,9 @@
 (function () {
     'use strict';
 
-    angular.module('lobilist').directive('lobilist', ['$timeout', lobilist]);
+    angular.module('lobilist').directive('lobilist', ['$timeout', '$compile', lobilist]);
 
-    function lobilist($timeout) {
+    function lobilist($timeout, $compile) {
         return {
             replace: true,
             restrict: 'E',
@@ -43,10 +43,11 @@
             },
             template: '',
             link: function link(scope, el, attrs) {
-                console.log("mdaaa");
                 $timeout(function () {
-                    console.log(scope.options);
+                    scope.options = scope.options || {};
+                    scope.options.forAngularJs = true;
                     $(el).lobiList(scope.options);
+                    $compile(el.contents())(scope);
                 });
             }
         };
